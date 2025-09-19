@@ -1,0 +1,490 @@
+/* 响应式设计 */
+
+/* 超大屏幕 (1400px+) */
+@media (min-width: 1400px) {
+    .app-container {
+        max-width: 1400px;
+        padding: var(--space-8);
+    }
+    
+    .title {
+        font-size: 3.5rem;
+    }
+    
+    .file-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6);
+    }
+    
+    .result-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6);
+    }
+}
+
+/* 大屏幕 (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .app-container {
+        max-width: 1200px;
+    }
+    
+    .file-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-5);
+    }
+}
+
+/* 中等屏幕 (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .app-container {
+        max-width: 960px;
+        padding: var(--space-6);
+    }
+    
+    .title {
+        font-size: var(--text-3xl);
+    }
+    
+    .upload-area {
+        padding: var(--space-12) var(--space-6);
+    }
+}
+
+/* 小屏幕 (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .app-container {
+        max-width: 720px;
+        padding: var(--space-5);
+    }
+    
+    .title {
+        font-size: var(--text-3xl);
+    }
+    
+    .subtitle {
+        font-size: var(--text-base);
+    }
+    
+    .upload-area {
+        padding: var(--space-10) var(--space-5);
+    }
+    
+    .upload-area h3 {
+        font-size: var(--text-lg);
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-3);
+    }
+    
+    .file-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-3);
+    }
+    
+    .file-actions {
+        margin-left: 0;
+        align-self: flex-end;
+    }
+    
+    .result-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-4);
+    }
+    
+    .download-btn {
+        margin-left: 0;
+        align-self: stretch;
+        text-align: center;
+    }
+}
+
+/* 超小屏幕 (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .app-container {
+        max-width: 540px;
+        padding: var(--space-4);
+    }
+    
+    .header {
+        margin-bottom: var(--space-8);
+        padding: var(--space-6) 0;
+    }
+    
+    .title {
+        font-size: var(--text-2xl);
+    }
+    
+    .subtitle {
+        font-size: var(--text-sm);
+    }
+    
+    .main-content {
+        gap: var(--space-6);
+    }
+    
+    .upload-section,
+    .file-list-section,
+    .control-section,
+    .progress-section,
+    .result-section {
+        padding: var(--space-6);
+    }
+    
+    .upload-area {
+        padding: var(--space-8) var(--space-4);
+    }
+    
+    .upload-icon {
+        font-size: 2rem;
+    }
+    
+    .upload-area h3 {
+        font-size: var(--text-base);
+    }
+    
+    .process-btn {
+        min-width: 160px;
+        padding: var(--space-3) var(--space-6);
+        font-size: var(--text-base);
+    }
+    
+    .download-all-btn {
+        padding: var(--space-3) var(--space-6);
+        font-size: var(--text-base);
+    }
+    
+    .file-card {
+        padding: var(--space-4);
+    }
+    
+    .file-name {
+        font-size: var(--text-sm);
+    }
+    
+    .progress-item {
+        padding: var(--space-3);
+        gap: var(--space-3);
+    }
+    
+    .result-item {
+        padding: var(--space-4);
+    }
+}
+
+/* 极小屏幕 (< 576px) */
+@media (max-width: 575px) {
+    .app-container {
+        padding: var(--space-3);
+    }
+    
+    .header {
+        margin-bottom: var(--space-6);
+        padding: var(--space-4) 0;
+    }
+    
+    .title {
+        font-size: var(--text-xl);
+        margin-bottom: var(--space-3);
+    }
+    
+    .subtitle {
+        font-size: var(--text-xs);
+        line-height: 1.4;
+    }
+    
+    .main-content {
+        gap: var(--space-5);
+    }
+    
+    .upload-section,
+    .file-list-section,
+    .control-section,
+    .progress-section,
+    .result-section {
+        padding: var(--space-4);
+        border-radius: var(--radius-md);
+    }
+    
+    .upload-area {
+        padding: var(--space-6) var(--space-3);
+        border-radius: var(--radius-md);
+    }
+    
+    .upload-icon {
+        font-size: 1.5rem;
+        margin-bottom: var(--space-3);
+    }
+    
+    .upload-area h3 {
+        font-size: var(--text-sm);
+        margin-bottom: var(--space-2);
+    }
+    
+    .upload-area p {
+        font-size: var(--text-xs);
+    }
+    
+    .upload-btn {
+        padding: var(--space-2) var(--space-3);
+        font-size: var(--text-xs);
+    }
+    
+    .section-header h3 {
+        font-size: var(--text-lg);
+    }
+    
+    .clear-btn {
+        padding: var(--space-1) var(--space-3);
+        font-size: var(--text-xs);
+    }
+    
+    .process-btn {
+        min-width: 140px;
+        min-height: 48px;
+        padding: var(--space-3) var(--space-4);
+        font-size: var(--text-sm);
+    }
+    
+    .download-all-btn {
+        padding: var(--space-3) var(--space-4);
+        font-size: var(--text-sm);
+    }
+    
+    .file-card {
+        padding: var(--space-3);
+    }
+    
+    .file-card-header {
+        margin-bottom: var(--space-2);
+    }
+    
+    .file-name {
+        font-size: var(--text-xs);
+        margin-bottom: var(--space-1);
+    }
+    
+    .file-size {
+        font-size: var(--text-xs);
+    }
+    
+    .file-card-footer {
+        padding-top: var(--space-2);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-2);
+    }
+    
+    .output-name {
+        font-size: var(--text-xs);
+    }
+    
+    .remove-btn {
+        width: 28px;
+        height: 28px;
+        font-size: var(--text-base);
+    }
+    
+    .progress-bar {
+        height: 8px;
+    }
+    
+    .progress-text {
+        font-size: var(--text-xs);
+    }
+    
+    .progress-item {
+        padding: var(--space-3);
+        gap: var(--space-2);
+    }
+    
+    .progress-filename {
+        font-size: var(--text-xs);
+    }
+    
+    .progress-status {
+        font-size: var(--text-xs);
+    }
+    
+    .result-item {
+        padding: var(--space-3);
+        gap: var(--space-3);
+    }
+    
+    .result-filename {
+        font-size: var(--text-sm);
+    }
+    
+    .result-details {
+        font-size: var(--text-xs);
+    }
+    
+    .download-btn {
+        padding: var(--space-2) var(--space-3);
+        font-size: var(--text-xs);
+    }
+    
+    .footer {
+        margin-top: var(--space-8);
+        padding-top: var(--space-6);
+    }
+    
+    .info-text p {
+        font-size: var(--text-xs);
+        line-height: 1.4;
+    }
+}
+
+/* 横屏手机优化 */
+@media (max-height: 500px) and (orientation: landscape) {
+    .header {
+        margin-bottom: var(--space-4);
+        padding: var(--space-3) 0;
+    }
+    
+    .title {
+        font-size: var(--text-lg);
+        margin-bottom: var(--space-2);
+    }
+    
+    .subtitle {
+        font-size: var(--text-xs);
+    }
+    
+    .upload-area {
+        padding: var(--space-4) var(--space-3);
+    }
+    
+    .upload-icon {
+        font-size: 1.2rem;
+        margin-bottom: var(--space-2);
+    }
+    
+    .main-content {
+        gap: var(--space-4);
+    }
+    
+    .upload-section,
+    .file-list-section,
+    .control-section,
+    .progress-section,
+    .result-section {
+        padding: var(--space-3);
+    }
+}
+
+/* 高分辨率屏幕优化 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .upload-icon {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) and (pointer: coarse) {
+    .upload-btn,
+    .clear-btn,
+    .process-btn,
+    .download-btn,
+    .download-all-btn,
+    .remove-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .file-card:hover::before {
+        transform: scaleX(1);
+    }
+    
+    .file-card:hover {
+        transform: none;
+        border-color: var(--primary-color);
+    }
+    
+    .upload-area:hover {
+        transform: none;
+    }
+    
+    .hover-lift:hover,
+    .hover-scale:hover,
+    .hover-rotate:hover {
+        transform: none;
+    }
+}
+
+/* 打印样式 */
+@media print {
+    .app-container {
+        max-width: none;
+        padding: 0;
+        background: white;
+        color: black;
+    }
+    
+    .header,
+    .upload-section,
+    .control-section,
+    .footer {
+        display: none;
+    }
+    
+    .file-list-section,
+    .progress-section,
+    .result-section {
+        background: white;
+        border: 1px solid #ccc;
+        box-shadow: none;
+        page-break-inside: avoid;
+    }
+    
+    .file-card,
+    .progress-item,
+    .result-item {
+        background: white;
+        border: 1px solid #ddd;
+        box-shadow: none;
+    }
+}
+
+/* 可访问性优化 */
+@media (prefers-reduced-motion: reduce) {
+    .upload-area::before,
+    .file-card::before,
+    .progress-fill::after,
+    .processing-animation::before {
+        animation: none;
+    }
+    
+    .upload-area:hover,
+    .file-card:hover,
+    .upload-btn:hover,
+    .process-btn:hover,
+    .download-btn:hover,
+    .download-all-btn:hover {
+        transform: none;
+    }
+}
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+    :root {
+        --border-color: #ffffff;
+        --text-secondary: #cccccc;
+        --text-muted: #aaaaaa;
+    }
+    
+    .upload-area {
+        border-width: 3px;
+    }
+    
+    .file-card,
+    .progress-item,
+    .result-item {
+        border-width: 2px;
+    }
+}
